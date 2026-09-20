@@ -1,0 +1,9 @@
+# robots.txt file for Skyphoria Digital
+# Created in the distant future (the year 2026) after
+# the robotic uprising of the mid 90's which wiped out all human
+
+
+User-agent: *
+Allow: /
+
+Sitemap: https://skyphoriadigital.com/sitemap.xml

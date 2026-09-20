@@ -1,0 +1,255 @@
+@media(min-width:1025px){
+.marketing-container {
+  width: 100%;
+  background: #fff;
+  padding: 100px 8%;
+  box-sizing: border-box;
+  margin-left: 50px;
+}
+
+/* ---------- Top two-column section ---------- */
+.marketing-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 100px;
+  gap: 40px;
+}
+
+.marketing-left {
+  flex: 1;
+  min-width: 320px;
+}
+
+.marketing-right {
+  flex: 1;
+  min-width: 320px;
+}
+
+.marketing-subtitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.marketing-title {
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #000;
+}
+
+.marketing-description { 
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  max-width: 550px;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.marketing-small-heading {
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  color: #000;
+  padding-bottom: 4px;
+}
+
+/* ---------- Clients section ---------- */
+.clients-section {
+  margin-top: 80px;
+  margin-left: 100px;
+  margin-bottom: 50px;
+}
+
+.clients-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: #000;
+}
+
+.clients-logos-slider {
+  margin: 0 auto;
+  max-width: 1400px;
+  padding: 16px 0;
+}
+.client-logo-slide {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+}
+.client-logo-img {
+  max-height: 50px;
+  max-width: 120px;
+  object-fit: contain;
+  filter: grayscale(10%);
+  opacity: 0.95;
+  transition: opacity 0.2s;
+}
+.clients-title1{
+  display:none;
+}
+}
+
+/* ---------- Responsive Design ---------- */
+@media  (max-width: 1024px) and (min-width:601px) {
+
+  .marketing-container {
+  width: 100%;
+  background: #fff;
+  padding: 100px 8%;
+  box-sizing: border-box;
+  margin-left: 50px;
+}
+.marketing-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 100px;
+  gap: 40px;
+}
+
+.marketing-left {
+  flex: 1;
+  min-width: 320px;
+}
+
+.marketing-right {
+  flex: 1;
+  min-width: 320px;
+}
+
+
+.marketing-subtitle{
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin-left: 0px;
+  font-size: 16px;
+}
+
+.marketing-title {
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 35px;
+  text-align: left;
+  width: 100%;
+  margin-left: 0px;
+}
+
+.marketing-right {
+  margin-top: 0px;
+  text-align: left;
+  width: auto;
+}
+.marketing-description{
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-align: left;
+  width: 100%;
+  margin-left: 0px;
+  font-weight: 400;
+}
+.marketing-small-heading{
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin-left: 0px;
+  text-decoration: none;
+  color: #000;
+}
+  .clients-title1{
+    display: none;
+  }
+  .clients-title{
+    margin-left: -80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .marketing-container {
+    padding: 60px 6%;
+    margin-left: 0px;
+    margin-top: -10px;
+    text-align: left;
+  }
+
+  .marketing-subtitle{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    text-align: left;
+
+  }
+
+  .marketing-title {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 600;
+    line-height: 1.2;
+    font-size: 32px;
+    text-align: left;
+    margin-bottom: 10px;
+    width: 350px;
+  }
+
+  .marketing-description {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 15px;
+    text-align: left;
+    line-height: 1.8;
+  }
+
+  .marketing-small-heading{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: left;
+    margin-left:0px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  .clients-title1 {
+
+  margin-top: 50px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 3px;
+  color: #000;
+}
+  .clients-logos-sliderMobile {
+  margin: 0 auto;
+  max-width: 1400px;
+  padding: 16px 0;
+}
+
+.client-logo-slideMobile {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+}
+
+.client-logo-imgMobile {
+  max-height: 50px;
+  max-width: 120px;
+  object-fit: contain;
+  filter: grayscale(10%);
+  opacity: 0.95;
+  transition: opacity 0.2s;
+}
+.clients-title{
+  display: none;
+}
+
+}

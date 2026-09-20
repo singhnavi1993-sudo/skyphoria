@@ -1,0 +1,363 @@
+/* ----- Section 1: Paid Search ----- */
+.paid-search-section {
+  width: 100vw;
+  background: #fff;
+  padding: 48px 0 0 0;
+  box-sizing: border-box;
+}
+
+.paid-search-header {
+  text-align: center;
+  margin-bottom: 38px;
+}
+.paid-search-logo {
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: #23233a;
+  margin-bottom: 18px;
+}
+.paid-search-title {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: #15151d;
+  margin-bottom: 0;
+  line-height: 1.12;
+}
+.paid-search-content {
+  display: table;
+  margin: 0 auto;
+  width: 1100px;
+  table-layout: fixed;
+}
+.paid-search-image-wrap, .paid-search-text {
+  display: table-cell;
+  vertical-align: middle;
+}
+.paid-search-image-wrap {
+  width: 48%;
+  padding-right: 56px;
+}
+.paid-search-image-wrap img {
+  width: 100%;
+  min-width: 290px;
+  max-width: 480px;
+  border-radius: 36px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+.paid-search-text {
+  width: 52%;
+  padding-left: 20px;
+}
+.paid-search-text h3 {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #15151d;
+  margin-bottom: 18px;
+  line-height: 1.2;
+}
+.paid-search-text p {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 1rem;
+  color: #23233a;
+  line-height: 1.5;
+  max-width: 680px;
+}
+
+/* ----- Section 2: Paid Pro ----- */
+.paid-pro-section {
+  width: 100vw;
+  display: table;
+  table-layout: fixed;
+  margin: 64px auto 0 auto;
+  background: #fff;
+  min-height: 340px;
+  padding-bottom: 4vw;
+}
+.paid-pro-left, .paid-pro-right {
+  display: table-cell;
+  vertical-align: middle;
+}
+.paid-pro-left{
+  width:8vw;
+  padding-left:20vw;
+  text-align: left;
+}
+.paid-pro-title {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: #15151d;
+  margin-bottom: 18px;
+  line-height: 1.12;
+}
+.paid-pro-desc {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 1rem;
+  color: #23233a;
+  line-height: 1.5;
+  max-width: 570px;
+}
+.paid-pro-right {
+  width:32vw;
+  padding-left: 10px;
+  text-align: center;
+}
+.paid-pro-card {
+  width: 550px;
+  max-width: 80vw;
+  height:390px;
+  border-radius: 12px;
+  object-fit: cover;
+  display: flex;
+  margin: 0 80px;
+  background: #f5f3ff;
+  padding: 12px;
+}
+/* ======================
+   TABLET CUSTOMIZATION
+   Tablets: max-width 1100px down to 900px
+   ====================== */
+@media (max-width: 1100px) and (min-width: 700px) {
+  /* Section 1 */
+  .paid-search-section {
+    padding: 32px 0 0 0;
+  }
+  .paid-search-header {
+    margin-bottom: 25px;
+  }
+  .paid-search-title {
+    font-size: 2.1rem;
+  }
+  .paid-search-content {
+    display: block;
+    width: 95vw;
+    padding-bottom: 2vw;
+    margin: 0 auto;
+  }
+  .paid-search-image-wrap,
+  .paid-search-text {
+    display: block;
+    width: 94vw;
+    max-width: 94vw;
+    padding: 0 2vw;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  .paid-search-image-wrap img {
+    max-width: 300px;
+    width: 94vw;
+    min-width: 570px;
+    height: 350px;
+    border-radius: 18px;
+    margin: 0 auto 8px auto;
+  }
+  .paid-search-text h3 {
+    font-size: 1.06rem;
+    margin-bottom: 10px;
+  }
+  .paid-search-text p {
+    font-size: .96rem;
+    max-width: 94vw;
+  }
+
+  /* Section 2: image first, vertical stacking */
+  .paid-pro-section {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100vw;
+    padding-bottom: 2vw;
+    margin-top: 32px;
+  }
+  .paid-pro-right {
+    order: 1;
+    width: 94vw;
+    padding: 0 2vw;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+  .paid-pro-left {
+    order: 2;
+    width: 94vw;
+    padding: 0 2vw;
+    text-align: left;
+    margin-bottom: 8px;
+  }
+  .paid-pro-title {
+    font-size: 1.3rem;
+    margin-bottom: 9px;
+    margin-left: 10px;
+  }
+  .paid-pro-desc {
+    font-size: 0.93rem;
+    max-width: 90vw;
+    margin-left: 10px;
+  }
+  .paid-pro-card {
+    width: 90vw;
+    max-width: 570px;
+    height: 350px;
+    margin: 0 auto 12px auto;
+    border-radius: 12px;
+    padding: 6px;
+  }
+}
+
+/* ======================
+   MOBILE CUSTOMIZATION
+   ====================== */
+@media (max-width: 700px) {
+  /* Section 1 */
+  .paid-search-logo {
+    font-size: 0.95rem;
+    margin-bottom: -15px;
+    text-align: left;
+    margin-left: 15px;
+  }
+  .paid-search-section {
+    padding: 21px 0 0 0;
+  }
+  .paid-search-header {
+    margin-bottom: 20px;
+  }
+  .paid-search-title {
+    margin-left: 15px;
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+  .paid-search-content {
+    width: 100vw;
+    margin: 0;
+    padding-bottom: 8px;
+  }
+  .paid-search-image-wrap,
+  .paid-search-text {
+    width: 99vw;
+    padding: 0 1vw;
+    max-width: 99vw;
+    margin-bottom: 13px;
+    text-align: left;
+    display: block;
+  }
+  .paid-search-image-wrap img {
+    width: 99vw;
+    max-width: 99vw;
+    min-width: 70px;
+    height: 210px;
+    border-radius: 8px;
+    margin-bottom: 0;
+  }
+  .paid-search-text h3 {
+    font-size: .95rem;
+    margin-bottom: 6px;
+    padding-left: 5px;
+  }
+  .paid-search-text p {
+    font-size: .85rem;
+    max-width: 98vw;
+    padding-left: 5px;
+  }
+
+  /* Section 2: image first, vertical stacking */
+  .paid-pro-section {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100vw;
+    padding-bottom: 9px;
+    margin-top: 16px;
+  }
+  .paid-pro-right {
+    order: 1;
+    width: 99vw;
+    padding: 0 1vw;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .paid-pro-left {
+    order: 2;
+    width: 99vw;
+    padding: 0 1vw;
+    text-align: left;
+  }
+  .paid-pro-title {
+    font-size: 0.97rem;
+    margin-bottom: 5px;
+    padding-left: 5px;
+  }
+  .paid-pro-desc {
+    font-size: 0.79rem;
+    max-width: 98vw;
+    padding-left: 5px;
+  }
+  .paid-pro-card {
+    width: 96vw;
+    max-width: 99vw;
+    height: auto;
+    min-height: 250px;
+    margin: 0 auto 8px auto;
+    border-radius: 6px;
+    padding: 2px;
+  }
+}
+
+/* ======================
+   MACBOOK CUSTOMIZATION
+   Wide desktop & MacBook: 1200px–1600px
+   ====================== */
+@media (min-width: 1200px) and (max-width: 1600px) {
+  .paid-search-section {
+    padding: 36px 0 0 0;
+  }
+  .paid-search-header {
+    margin-bottom: 28px;
+  }
+  .paid-search-title {
+    font-size: 2.6rem;
+  }
+  .paid-search-content {
+    width: 900px;
+  }
+  .paid-search-image-wrap img {
+    max-width: 360px;
+    border-radius: 26px;
+  }
+  .paid-search-text {
+    padding-left: 12px;
+  }
+  .paid-pro-section {
+    margin: 38px auto 0 auto;
+    min-height: 290px;
+    padding-bottom: 2vw;
+    width: 950px;
+    display: table;
+  }
+  .paid-pro-left, .paid-pro-right {
+    width: 22vw;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    vertical-align: middle;
+    margin-bottom: 0;
+  }
+  .paid-pro-title {
+    font-size: 1.8rem;
+  }
+  .paid-pro-desc {
+    font-size: 1rem;
+  }
+  .paid-pro-card {
+    max-width: 400px;
+    height: 300px;
+    padding: 7px;
+    border-radius: 13px;
+    margin: 0 auto;
+    object-fit:contain;
+  }
+}

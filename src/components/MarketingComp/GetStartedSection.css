@@ -1,0 +1,123 @@
+/* GetStartedSection.css */
+
+.get-started-section-bg {
+  background: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 70px 0 70px 0;
+}
+
+.get-started-content {
+  position: relative;
+  width: 80vw;
+  max-width: 1300px;
+  min-height: 370px;
+  background: #f9f9fb;
+  border-radius: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.get-started-partner {
+  margin-top: 40px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.get-started-partner-g {
+  font-weight: 700;
+  font-size: 2.2rem;
+  margin-right: 8px;
+  color: #23203a;
+}
+
+.get-started-partner-label {
+  font-size: 1.11rem;
+  color: #23203a;
+  font-weight: 500;
+}
+
+.get-started-title {
+  text-align: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 2.7rem;
+  font-weight: 700;
+  line-height: 1.06;
+  margin-bottom: 36px;
+  margin-top: 10px;
+  color: #0c0c0c;
+}
+
+.get-started-btn {
+  display: inline-flex;
+  align-items: center;
+  background: #23203A;
+  color: #fff;
+  font-size: 1.10rem;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 600;
+  padding: 16px 36px;
+  border-radius: 25px;
+  text-decoration: none;
+  margin-bottom: 40px;
+  margin-top: 10px;
+  transition: background 0.17s;
+  letter-spacing: 0.03em;
+  box-shadow: 0 3px 18px rgba(37,30,50,0.08);
+}
+
+.get-started-btn:hover {
+  color: #fff;
+  background: #7c5fff;
+}
+
+.arrow {
+  font-size: 1.22rem;
+}
+
+.get-started-rocket {
+  position: absolute;
+  right: clamp(24px, 7vw, 66px);
+  top: -82px;
+  width: 150px;
+  height: auto;
+  pointer-events: none;
+  user-select: none;
+}
+
+@media (max-width: 900px) {
+  .get-started-content {
+    width: 98vw;
+    font-size: 1.04rem;
+    border-radius: 32px;
+    min-height: 220px;
+    margin-top: -100px;
+  }
+  .get-started-title {
+    font-size: 2.0rem;
+  }
+  .get-started-rocket {
+    width: 95px;
+    top: -38px;
+  }
+}
+
+@media (max-width: 600px) {
+  .get-started-title {
+    font-size: 1.18rem;
+  }
+  .get-started-btn {
+    font-size: 0.95rem;
+    padding: 12px 18px;
+  }
+  .get-started-rocket {
+    width: 50px;
+    top: 10px;
+    right: 12px;
+  }
+}

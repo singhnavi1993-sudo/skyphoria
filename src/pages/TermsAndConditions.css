@@ -1,0 +1,31 @@
+.terms-bg {
+  background: linear-gradient(180deg, #efebfb 0%, #fff 100%);
+  min-height: 100vh;
+}
+.terms-container {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin-top: 40px !important;
+  max-width: 1250px !important;
+  margin: 0 auto;
+  background: transparent;
+}
+.main-title {
+  font-size: 52px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.update-text {
+  color: #6F6F88;
+  font-size: 16px;
+  margin-bottom: 30px
+}
+h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-top: 40px;
+}
+p, a {
+  font-size: 18px;
+  color: #23203A;
+  line-height: 1.65;
+}

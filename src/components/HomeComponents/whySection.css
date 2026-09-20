@@ -1,0 +1,192 @@
+@media(min-width:601px){
+.drive-revenue-section {
+  text-align: center;
+  padding: 56px 0 64px 0;
+  background: #fff;
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+
+.drive-revenue-overline {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #000000;
+  letter-spacing: 1.2px;
+  margin-bottom: 17px;
+  margin-top: 0;
+  opacity: 0.75;
+}
+
+.drive-revenue-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #111016;
+  margin: 0 0 42px 0;
+  letter-spacing: .2px;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.drive-revenue-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 32px;
+  flex-wrap: wrap;
+}
+
+.drive-revenue-col {
+  flex: 1 1 250px;
+  max-width: 310px;
+  min-width: 220px;
+  margin: 0 22px;
+  padding: 0;
+  text-align: left;
+}
+
+.drive-revenue-icon {
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  height: 66px;
+  margin-bottom: 18px;
+  margin-right: 255px;
+}
+
+.drive-revenue-icon i {
+  font-size: 1.3rem;
+  color: #7b6aff;
+  background: #f1f1f8;
+  border-radius: 50%;
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 18px auto;
+}
+
+
+.drive-revenue-icon img {
+  width: 30px;
+  height: 30px;
+  background: #f2f1ff;
+  border-radius: 50%;
+  padding: 10px;
+  object-fit: contain;
+}
+
+.drive-revenue-col h3 {
+  font-size: 0.99rem;
+  font-weight: 700;
+  color: #111016;
+  margin-bottom: 16px;
+  margin-top: 0;
+  letter-spacing: 0.04em;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.drive-revenue-col p {
+  font-size: 0.99rem;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: #000000;
+  line-height: 1.6;
+  font-weight: 400;
+  margin: 0;
+}
+}
+
+@media (max-width:600px) {
+
+  .drive-revenue-section {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    padding: 40px 8px 48px 8px;
+    background: #fff;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 10px;
+  }
+
+  .drive-revenue-row {
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+    max-width: 100%;
+    padding: 0;
+    margin: 0 auto;
+    align-items: center;
+  }
+
+  .drive-revenue-col {
+    max-width: 98vw;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  .drive-revenue-icon {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    height: 50px;
+    margin-bottom: 16px;
+    margin-right: 290px;
+  }
+
+  .drive-revenue-icon i {
+  font-size: 1.3rem;
+  color: #7b6aff;
+  background: #f1f1f8;
+  border-radius: 50%;
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 0 auto;
+ }
+  
+
+  .drive-revenue-icon img {
+    width: 28px;
+    height: 28px;
+    background: #f2f1ff;
+    border-radius: 50%;
+    padding: 10px;
+    object-fit: contain;
+  }
+
+  .drive-revenue-overline {
+    font-size: 1.1rem;
+    margin-bottom: 14px;
+    margin-right: 10px
+  }
+
+  .drive-revenue-title {
+    
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    line-height: 1.1;
+    margin-right: 10px;
+  }
+
+  .drive-revenue-col h3 {
+    font-size: 0.96rem;
+    margin-bottom: 12px;
+    margin-top: 0;
+  }
+
+  .drive-revenue-col p {
+    font-size: 0.97rem;
+    margin: 0;
+    line-height: 1.5;
+  }
+}
+

@@ -1,0 +1,140 @@
+/* AboutStrategySection.css */
+
+.strategy-section-bg {
+  padding: 70px 0;
+  background: #fff;
+}
+
+.strategy-section-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 204px;
+  margin-bottom: 100px;
+}
+
+.strategy-section-image-wrap {
+  flex-shrink: 0;
+  width: 600px;
+  height: 450px;
+  overflow: hidden;
+  border-radius: 50px;
+  box-shadow: 0 6px 32px rgba(80, 70, 170, 0.06);
+}
+
+.strategy-section-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50px;
+}
+
+.strategy-section-content {
+  max-width: 670px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.strategy-section-title {
+  font-size: 2.5lrem;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 600;
+  margin-bottom: 28px;
+  color: #1b1b1b;
+  line-height: 1.05;
+}
+
+.strategy-section-desc {
+  color: #23203A;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  margin-bottom: 32px;
+  font-weight: 400 !important; /* Force normal weight even if inherited or overridden */
+}
+
+.strategy-section-desc, 
+.strategy-section-desc * {
+  font-weight: 400 !important;
+}
+
+
+.strategy-section-link {
+  color: #131313;
+  font-weight: 700;
+  font-size: 1rem;  
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  letter-spacing: 0.03em;
+  text-decoration: underline;
+  padding-bottom: 2px;
+  transition: color 0.1s;
+}
+
+.strategy-section-link:hover {
+  color: #7c5fff;
+}
+.success-hero__divider {
+    width: 80%;
+    margin: 36px auto 0;
+}
+
+.success-hero__divider svg {
+    margin-top: 100px;
+    width: 100%;
+    height: 28px;
+}
+
+
+
+@media (max-width: 1000px) {
+  .strategy-section-container {
+    flex-direction: column;
+    gap: 38px;
+    align-items: stretch;
+  }
+  .strategy-section-image-wrap {
+    width: 92vw;
+    margin-top: -100px;
+    height: 480px;
+    border-radius: 26px;
+  }
+  .strategy-section-image {
+    border-radius: 26px;
+  }
+}
+
+@media (max-width: 600px) {
+  .strategy-section-container{
+    margin-top: 20px;
+  }
+  .strategy-section-title {
+    font-size: 1.45rem;
+  }
+  .strategy-section-desc {
+    font-size: 0.99rem;
+  }
+  .strategy-section-link {
+        font-size: 0.95rem;
+    }
+    .strategy-section-image-wrap {
+        margin-top: -130px;
+        height: 220px;
+        margin-left: -20px;
+    }
+    .strategy-section-image {
+        border-radius: 16px;
+    }
+    .success-hero__divider1 {
+        display: none;
+    }  
+    .success-hero__divider1 svg {
+       display: none;
+    }
+
+
+}

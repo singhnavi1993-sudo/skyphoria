@@ -1,0 +1,370 @@
+@media(min-width: 1025px) {
+ 
+.skyphoria-about-section {
+  padding: 60px 0;
+  background: #fff;
+}
+.skyphoria-about-container {
+  display: flex; 
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 50px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.skyphoria-about-left {
+  max-width: 650px;
+}
+.skyphoria-about-label {
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;  
+  display: block;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+  color: #1b1b1b;
+  margin-bottom: 0px;
+  margin-left: 155px;
+}
+.skyphoria-about-headline {
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #141414;
+  margin-left: 155px;
+  margin-bottom: 50px;
+  margin-top: 20px;
+
+}
+.skyphoria-about-right {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.skyphoria-about-desc {
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: #555;
+  font-size: 0.9rem;
+  margin-bottom: 0px;
+  margin-top: 60px;
+}
+.skyphoria-about-btn {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #16197a;
+  text-decoration: none;
+  transition: color 0.2s;
+  display: inline-block;
+  margin-top: 10px;
+}
+.skyphoria-about-btn:hover {
+  color: #3c42d8;
+  border-color: #3c42d8;
+}
+
+/* TIMELINE AND DOTS SECTION */
+.timeline-grid-container {
+  width: 82%;
+  margin: 32px auto 0 auto;
+}
+.timeline-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 36px auto;
+  align-items: start;
+  position: relative;
+}
+.timeline-grid-dot-cell {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.timeline-dot {
+  width: 16px;
+  height: 16px;
+  background: #7266f6;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  z-index: 2;
+}
+.timeline-grid-line {
+  position: absolute;
+  left:50%;
+  top: 50%;
+  width: 100%;
+  height: 2px;
+  border-top: 2px dashed #ddd;
+  z-index: 1;
+  transform: translateY(-50%);
+}
+.timeline-grid-card-cell {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+.timeline-highlight {
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  width: 90%;
+  text-align: center;
+  font-size: 0.9rem;
+}
+.timeline-mobile-container { display: none; }
+.desktop-timeline { display: block; }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+
+  .skyphoria-about-section {
+    padding: 38px 0;
+    background: #fff;
+  }
+
+  .skyphoria-about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 34px;
+    max-width: 96vw;
+    margin: 0 auto;
+    gap: 18px;
+  }
+
+  .skyphoria-about-left {
+    max-width: 390px;
+  }
+
+  .skyphoria-about-label {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: block;
+    font-weight: bold;
+    letter-spacing: 1.4px;
+    font-size: 0.82rem;
+    color: #1b1b1b;
+    margin-bottom: 0;
+    margin-left: 36px;
+  }
+
+  .skyphoria-about-headline {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+    font-size: 1.75rem;
+    font-weight: 700;
+    line-height: 1.13;
+    color: #141414;
+    margin-left: 36px;
+    margin-bottom: 30px;
+    margin-top: 16px;
+    width: 310px;
+  }
+
+  .skyphoria-about-right {
+    max-width: 340px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .skyphoria-about-desc {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #555;
+    font-size: 0.8rem;
+    margin-bottom: 0px;
+    margin-top: 35px;
+  }
+
+  .skyphoria-about-btn {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #16197a;
+    text-decoration: none;
+    transition: color 0.2s;
+    display: inline-block;
+    margin-top: 8px;
+    margin-bottom: 20px;
+  }
+  .skyphoria-about-btn:hover {
+    color: #3c42d8;
+    border-color: #3c42d8;
+  }
+
+  /* TIMELINE AND DOTS SECTION */
+  .timeline-grid-container {
+    width: 98%;
+    margin: 22px auto 0 auto;
+  }
+
+  .timeline-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 25px auto;
+    align-items: start;
+    position: relative;
+    gap: 0.5rem;
+  }
+
+  .timeline-grid-dot-cell {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .timeline-dot {
+    width: 11px;
+    height: 11px;
+    background: #7266f6;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    z-index: 2;
+  }
+
+  .timeline-grid-line {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    height: 2px;
+    border-top: 2px dashed #ddd;
+    z-index: 1;
+    transform: translateY(-50%);
+  }
+
+  .timeline-grid-card-cell {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 12px;
+  }
+
+  .timeline-highlight {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    width: 97%;
+    text-align: center;
+    font-size: 0.8rem;
+  }
+
+  .timeline-mobile-container { display: none; }
+  .desktop-timeline { display: block; }
+}
+
+@media (max-width: 600px) {
+
+.skyphoria-about-section {
+  padding: 24px 0;
+}
+
+.skyphoria-about-container {
+  display: block;
+  max-width: 98vw;
+  margin: 0 auto 20px auto;
+}
+
+.skyphoria-about-left {
+  max-width: unset;
+}
+
+.skyphoria-about-label {
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  margin-bottom: 2px;
+  margin-left: 12px;
+  margin-left: 20px;
+
+}
+
+.skyphoria-about-headline {
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 1.67rem;
+  margin-left: 12px;
+  margin-top: 8px;
+  margin-bottom: 12px;
+  margin-left: 20px;
+}
+
+.skyphoria-about-right {
+  max-width: unset;
+  gap: 8px;
+  margin: 10px 0 0 0;
+}
+
+.skyphoria-about-desc {
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 0.85rem;
+  margin-top: 16px;
+  margin-left: 20px;
+}
+
+.skyphoria-about-btn {
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: #000;
+  font-size: 0.76rem;
+  margin-top: 8px;
+  margin-left: 20px;
+}
+
+.skyphoria-about-btn:hover {
+  color: #3c42d8;
+  border-color: #3c42d8;
+}
+
+/* Hide desktop timeline on mobile */
+.timeline-grid-container { display: none !important; }
+
+/* Mobile timeline adjustments */
+.timeline-mobile-container {
+  display: flex !important;
+  flex-direction: column;
+  gap: 34px;
+  margin: 32px 0 0 0;
+  width: 100%;
+}
+
+.timeline-mobile-item {
+  width: 85%;
+}
+
+.timeline-mobile-dotline {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.timeline-dot {
+  width: 14px;
+  height: 14px;
+  background: #7266f6;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  margin-right: -1px;
+  flex-shrink: 1;
+}
+
+.timeline-mobile-dashed {
+  flex: 1;
+  height: 0;
+  border-top: 2px dashed #d5d5d5;
+  margin-left: 0;
+  display: block;
+}
+
+.timeline-mobile-content {
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-align: left;
+  font-size: 0.79rem;
+  color: #222;
+  margin-left: 20px;
+}
+
+.timeline-mobile-content strong {
+  display: block;
+  margin-bottom: 7px;
+  font-weight: bold;
+  font-size: 1.09rem;
+}
+}
+

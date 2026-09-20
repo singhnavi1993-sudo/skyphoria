@@ -1,0 +1,449 @@
+.paid-box-section {
+  width: 100vw;
+  background: #fff;
+  display:inline;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0;
+  min-height: 86vh;
+}
+
+.ps-section-header {
+  width: 100vw;
+  text-align: center;
+  background: #fff;
+  padding: 29px 0 13px 0;
+}
+
+.ps-section-overline {
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  color: #23233a;
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
+.ps-section-title {
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: #15151d;
+  margin: 0 0 13px 0;
+  line-height: 1.13;
+}
+
+.ps-section-desc {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 1.03rem;
+  color: #23233a;
+  line-height: 1.45;
+  max-width: 860px;
+  margin: 0 auto;
+  opacity: 0.81;
+}
+
+
+.paid-box-main {
+  display: flex;
+  position: relative;
+  background: #fff;
+  border-radius: 64px;
+  max-width: 1200px;
+  height: 550px;
+  margin: 64px auto;
+  align-items: stretch;
+  box-shadow: 0 2px 24px rgba(44, 51, 73, 0.08);
+  overflow: visible;
+}
+
+.paid-sidebar {
+  background: #0d0a14;
+  border-radius: 64px 0 0 64px;
+  width: 330px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px 0;
+  gap: 34px;
+}
+
+.paid-sidebar-item {
+  font-size: 1.09rem;
+  font-weight: 600;
+  color: #e7e7eb;
+  left: 0;
+  padding: 28px 32px;
+  margin-left: 10px;
+  border-radius: 52px;
+  cursor: pointer;
+  position: relative !important;
+  display: flex;
+  align-items: center;
+  user-select: none;
+  background: none;
+  /* REMOVE transition property if present */
+}
+
+.paid-sidebar-item:not(.paid-active) {
+  background: none;
+  color: #e7e7eb;
+}
+.paid-sidebar-item.paid-active {
+  padding-left: 32px;
+  padding-right: 120px;       /* Space for arrow */
+  min-width:230px;           /* Even wider active bar */
+}
+
+.paid-active {
+  background: #7c61e8;
+  color: #fff;
+  border-radius: 52px;
+  position: relative;
+}
+
+.paid-arrow {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 51px;
+  height: 51px;
+  background: #0d0a14;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 4;
+  box-shadow: 0 2px 12px rgba(44,51,73,0.13);
+}
+.paid-arrow i {
+  font-size: 27px;
+  color: #fff;
+  line-height: 1;
+  vertical-align: middle;
+}
+
+/* Right Panel */
+.paid-rightpanel {
+  flex: 1;
+  background: #f6f6fa;
+  border-radius: 44px;
+  display: flex;
+  flex-direction: column;
+  padding: 68px 68px 48px 178px;
+  gap: 22px;
+  align-items: flex-start;
+  justify-content: center;
+  min-height: 100%;
+  margin-left: -25px;
+}
+
+.paid-title {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 2.4rem;
+  color: #15151d;
+  margin-bottom: 18px;
+}
+.paid-desc {
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 1.08rem;
+  color: #23233a;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  max-width: 650px;
+}
+.paid-cta-btn {
+  text-decoration: none;
+  background: #181622;
+  color: #fff;
+  padding: 15px 36px;
+  border: none;
+  border-radius: 2.6rem;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 2px 12px rgba(38, 40, 45, 0.08);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-top: 8px;
+  transition: background 0.2s;
+}
+.paid-cta-btn:hover {
+  background: #7c61e8;
+  color: #fff;
+}
+.paid-cta-arrow {
+  font-size: 1.22rem;
+}
+  .paid-rightpanel.paid-rightpanel-inline {
+    display: none !important;
+  }
+  .paid-rightpanel.paid-rightpanel-desktop {
+    display: block;
+  }
+/* ======================
+   PAID SEARCH CUSTOMIZATION
+   ====================== */
+   
+/* Tablet Styles */
+@media (max-width: 1100px) and (min-width: 701px) {
+  
+    .ps-section-header {
+    padding: 18px 0 10px 0;
+    width: 100vw;
+  }
+  .ps-section-overline {
+    font-size: 0.89rem;
+    margin-bottom: 15px;
+    letter-spacing: 0.11em;
+  }
+  .ps-section-title {
+    font-size: 2.7rem;
+    margin: 0 0 7px 0;
+    line-height: 1.14;
+    margin-bottom: 20px;
+  }
+  .ps-section-desc {
+    font-size: 0.99rem;
+    max-width: 96vw;
+    padding: 0 4vw;
+  }
+  .paid-box-main {
+    flex-direction: row; /* Keep sidebar and content side-by-side (no stacking) */
+    max-width: 800px; /* slightly narrower than desktop */
+    border-radius: 54px;
+    margin: 40px auto;
+    height: 500px;
+    box-shadow: 0 1px 14px rgba(44, 51, 73, 0.1);
+    margin-left: 10px;
+  }
+  .paid-sidebar {
+    width: 280px; /* slightly smaller sidebar */
+    border-radius: 54px 0 0 54px;
+    padding: 32px 0;
+    gap: 28px;
+  }
+  .paid-sidebar-item, .paid-active {
+    font-size: 1.0rem;
+    padding: 24px 28px;
+    min-width: auto;
+    max-width: 240px;
+  }
+  .paid-sidebar-item.paid-active {
+    min-width: 250px;
+    width: 78%; /* slightly narrower than desktop active bar */
+    padding-right: 52px;
+  }
+  .paid-rightpanel {
+    padding: 48px 48px 36px 130px;
+    border-radius: 30px 54px 54px 30px;
+    margin-left: -25px;
+    min-height: 100%;
+  }
+  .paid-title {
+    font-size: 2rem;
+  }
+  .paid-desc {
+    font-size: 1rem;
+    max-width: 530px;
+  }
+  .paid-cta-btn {
+    font-size: .95rem;
+    padding: 14px 28px;
+  }
+}
+
+
+/* Mobile Styles */
+
+/* ------------------------------------------------- */
+/*                PERFECT MOBILE VIEW               */
+/* ------------------------------------------------- */
+
+@media (max-width: 700px) {
+
+  .paid-box-section {
+    width: 100vw;
+    background: #fff;
+    display: block;                 /* Block layout, not inline or flex */
+    padding: 0;
+    min-height: 0;                  /* Remove excessive vertical height */
+    margin: 0 auto;
+    margin-top: 0px;
+    /* Remove alignment since not needed in block stacking */
+  }
+
+  .ps-section-header {
+    padding: 12px 0 4px 0;
+    width: 100vw;
+  }
+  .ps-section-overline {
+    text-align: left;
+    margin-left: 15px;
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+    letter-spacing: 0.09em;
+  }
+  .ps-section-title {
+    font-size: 1.25rem;
+    line-height: 1.18;
+    text-align: left;
+    margin: 0 0 2px 0;
+    padding: 0 6vw;
+    margin-bottom: 20px;
+    margin-left: -5px;
+  }
+  .ps-section-desc {
+    font-size: 0.82rem;
+    text-align: left;
+    max-width: 97vw;
+    padding: 0 7vw;
+    margin: 0 auto;
+    opacity: 0.88;
+    margin-left: -5px;
+  }
+
+  /* Outer section */
+  .paid-box-main {
+    flex-direction: column;
+    width: 90%;
+    margin: 20px auto;
+    background: #0d0a14;
+    border-radius: 32px;
+    padding: 20px;
+    gap: 0;
+    height: auto !important;
+  }
+
+  /* Sidebar is vertical list */
+  .paid-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: 95%;
+    background: transparent;
+    margin-left: 10px;
+    padding: 0;
+  }
+
+  /* INACTIVE TAB — black + icon */
+  .paid-sidebar-item {
+    background: #0d0a14;
+    color: #fff;
+    padding: 16px 20px;
+    border-radius: 26px;
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    position: relative;
+
+  }
+
+  /* Remove desktop arrow */
+  .paid-arrow {
+    display: none !important;
+  }
+
+  /* + icon */
+  .paid-sidebar-item::after {
+    content: "+";
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #fff;
+    color: #7c61e8;
+    font-size: 20px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+/* COMMON STYLE FOR + / - CIRCLE */
+.paid-sidebar-item::after {
+  content: "+";
+  width: 36px !important;
+  height: 36px !important;
+  min-width: 36px !important;
+  min-height: 36px !important;
+  border-radius: 50% !important;
+  background: #ffffff;
+  color: #7c61e8;
+  font-size: 20px;
+  font-weight: 700;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  flex-shrink: 0 !important;
+}
+
+
+  .paid-sidebar-item.paid-active::after {
+    width: 34px;
+    height: 34px;
+    content: "–";
+    background: #ffffff;
+    color: #7c61e8;
+    margin-left: 20px;
+  }
+
+  /* Add spacing BELOW active tab where card will appear */
+  .paid-sidebar-item.paid-active {
+    margin-bottom: 16px;
+  }
+
+  /* -------------------------- */
+  /* CONTENT CARD UNDER TAB     */
+  /* -------------------------- */
+  .paid-rightpanel {
+    display: block;
+    width: 100%;
+    background: #ffffff;
+    border-radius: 28px;
+    padding: 24px 22px;
+    margin-top: -6px;  /* pulls card closer to tab */
+  }
+
+  /* Typography inside the card */
+  .paid-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #15151d;
+  }
+
+  .paid-desc {
+    font-size: 1rem;
+    line-height: 1.52;
+    color: #23233a;
+    margin-bottom: 18px;
+  }
+
+  /* CTA button full-width */
+  .paid-cta-btn {
+    width: 100%;
+    text-decoration: none;
+    padding: 14px 0;
+    justify-content: center;
+    border-radius: 20px;
+    font-size: 0.95rem;
+    background: #181622;
+    margin-top: 10px;
+  }
+    .paid-rightpanel.paid-rightpanel-desktop {
+    display: none !important;
+  }
+    .paid-rightpanel.paid-rightpanel-inline {
+    display: block !important;
+  }
+  /* hide the desktop arrow on mobile (your existing mobile CSS already did this) */
+  .paid-arrow {
+    display: none !important;
+  }
+}
