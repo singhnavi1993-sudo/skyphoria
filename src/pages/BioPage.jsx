@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import Slider from 'react-slick';
@@ -123,44 +124,51 @@ export default function BioPage() {
 
   useEffect(() => {
     if (mapContainerRef.current && !mapInstanceRef.current) {
-      // Initialize Leaflet Map
-      const map = L.map(mapContainerRef.current, {
-        center: coords,
-        zoom: 15,
-        zoomControl: false,
-        attributionControl: false,
-        scrollWheelZoom: false,
-        dragging: true,
-      });
+      if (mapContainerRef.current._leaflet_id) {
+        mapContainerRef.current._leaflet_id = null;
+      }
+      try {
+        // Initialize Leaflet Map
+        const map = L.map(mapContainerRef.current, {
+          center: coords,
+          zoom: 15,
+          zoomControl: false,
+          attributionControl: false,
+          scrollWheelZoom: false,
+          dragging: true,
+        });
 
-      // Add OpenStreetMap tiles
-      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        maxZoom: 19,
-      }).addTo(map);
+        // Add OpenStreetMap tiles
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          maxZoom: 19,
+        }).addTo(map);
 
-      // Custom DivIcon for red pin + "SEE YOUR LOCATION" pill badge above
-      const customMarkerIcon = L.divIcon({
-        className: 'custom-map-marker-container',
-        html: `
-          <div class="map-pin-badge-wrapper">
-            <div class="see-location-badge">
-              <svg class="badge-pin-icon" viewBox="0 0 24 24" width="12" height="12" fill="currentColor">
-                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-              </svg>
-              <span>SEE YOUR LOCATION</span>
+        // Custom DivIcon for red pin + "SEE YOUR LOCATION" pill badge above
+        const customMarkerIcon = L.divIcon({
+          className: 'custom-map-marker-container',
+          html: `
+            <div class="map-pin-badge-wrapper">
+              <div class="see-location-badge">
+                <svg class="badge-pin-icon" viewBox="0 0 24 24" width="12" height="12" fill="currentColor">
+                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                </svg>
+                <span>SEE YOUR LOCATION</span>
+              </div>
+              <div class="map-red-pushpin">
+                <div class="pushpin-head"></div>
+                <div class="pushpin-stem"></div>
+              </div>
             </div>
-            <div class="map-red-pushpin">
-              <div class="pushpin-head"></div>
-              <div class="pushpin-stem"></div>
-            </div>
-          </div>
-        `,
-        iconSize: [160, 65],
-        iconAnchor: [80, 60],
-      });
+          `,
+          iconSize: [160, 65],
+          iconAnchor: [80, 60],
+        });
 
-      L.marker(coords, { icon: customMarkerIcon }).addTo(map);
-      mapInstanceRef.current = map;
+        L.marker(coords, { icon: customMarkerIcon }).addTo(map);
+        mapInstanceRef.current = map;
+      } catch (err) {
+        console.error("Leaflet map initialization caught:", err);
+      }
     }
 
     const handleResize = () => {
@@ -173,7 +181,11 @@ export default function BioPage() {
     return () => {
       window.removeEventListener('resize', handleResize);
       if (mapInstanceRef.current) {
-        mapInstanceRef.current.remove();
+        try {
+          mapInstanceRef.current.remove();
+        } catch (e) {
+          // Ignore cleanup error
+        }
         mapInstanceRef.current = null;
       }
     };
@@ -424,13 +436,13 @@ export default function BioPage() {
               <Slider ref={workSliderRef} {...workSliderSettings}>
                 {workCategories.map((item) => (
                   <div key={item.id} className="work-story-slide">
-                    <a href={`/services/${item.slug}`} className="work-story-link">
+                    <Link to={`/services/${item.slug}`} className="work-story-link">
                       <div className="story-circle">
                         {item.icon}
                       </div>
                       <span className="story-label">{item.title}</span>
                       <span className="story-subtext">Check out our work</span>
-                    </a>
+                    </Link>
                   </div>
                 ))}
               </Slider>

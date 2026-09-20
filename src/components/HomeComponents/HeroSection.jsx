@@ -28,12 +28,14 @@ export default function HeroForm() {
     fetch('https://admin.skyphoriadigital.com/wp-json/wp/v2/hero_card?per_page=3&_embed')
       .then(res => res.json())
       .then(data => {
-        const cards = data.map(item => {
-          const image = item._embedded?.['wp:featuredmedia']?.[0]?.source_url || '';
-          const altText = item.alt_text || '';
-          return { id: item.id, title: item.title.rendered, image, altText };
-        });
-        setHeroCards(cards);
+        if (Array.isArray(data)) {
+          const cards = data.map(item => {
+            const image = item._embedded?.['wp:featuredmedia']?.[0]?.source_url || '';
+            const altText = item.alt_text || '';
+            return { id: item.id, title: item.title.rendered, image, altText };
+          });
+          setHeroCards(cards);
+        }
       })
       .catch(console.error);
   }, []);

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Skyphoria Digital</title>
+    <script type="text/javascript">
+      // Single Page Application redirect script for GitHub Pages
+      (function() {
+        var path = window.location.pathname;
+        var search = window.location.search;
+        var hash = window.location.hash;
+        
+        var repoName = '/skyphoria';
+        var relativePath = path;
+        if (relativePath.indexOf(repoName) === 0) {
+          relativePath = relativePath.slice(repoName.length);
+        }
+        
+        if (relativePath && relativePath !== '/' && relativePath !== '/index.html') {
+          var redirectUrl = window.location.protocol + '//' + window.location.host + repoName + '/#' + relativePath + search;
+          window.location.replace(redirectUrl);
+        } else {
+          var homeUrl = window.location.protocol + '//' + window.location.host + repoName + '/#/' + search;
+          window.location.replace(homeUrl);
+        }
+      })();
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

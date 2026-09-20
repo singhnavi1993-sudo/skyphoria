@@ -13,7 +13,7 @@ export default function BlogSection() {
   useEffect(() => {
     fetch(WP_API)
       .then(res => res.json())
-      .then(data => setPosts(data))
+      .then(data => setPosts(Array.isArray(data) ? data : []))
       .catch(() => setPosts([]));
   }, []);
 
