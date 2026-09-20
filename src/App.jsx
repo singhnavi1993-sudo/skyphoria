@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from "react-router-dom";
+import { HashRouter as Router, Routes, Route, Navigate, useLocation } from "react-router-dom";
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import HomePage from './pages/HomePage';
@@ -17,7 +17,7 @@ import ScrollToTop from './components/ScrollToTop';
 
 function AppLayout() {
   const location = useLocation();
-  const isStandaloneBioPage = location.pathname === '/bio' || location.pathname.startsWith('/bio') || location.pathname.startsWith('/skyphoria/bio');
+  const isStandaloneBioPage = location.pathname.includes('/bio');
 
   return (
     <>
