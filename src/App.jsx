@@ -18,7 +18,7 @@ import ScrollToTop from './components/ScrollToTop';
 
 function AppLayout() {
   const location = useLocation();
-  const isStandaloneBioPage = location.pathname.endsWith('/bio');
+  const isStandaloneBioPage = location.pathname.includes('/bio') || window.location.pathname.includes('/bio');
 
   return (
     <>
