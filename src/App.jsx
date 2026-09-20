@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import { HashRouter as Router, Routes, Route, Navigate, useLocation, useNavigate } from "react-router-dom";
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from "react-router-dom";
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import HomePage from './pages/HomePage';
@@ -18,17 +18,7 @@ import ScrollToTop from './components/ScrollToTop';
 
 function AppLayout() {
   const location = useLocation();
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    // Automatically synchronize direct path URLs (e.g. /skyphoria/bio or /bio) to HashRouter route
-    const currentPath = window.location.pathname;
-    if (currentPath.includes('/bio') && location.pathname !== '/bio') {
-      navigate('/bio', { replace: true });
-    }
-  }, [location.pathname, navigate]);
-
-  const isStandaloneBioPage = location.pathname.includes('/bio') || window.location.pathname.includes('/bio');
+  const isStandaloneBioPage = location.pathname.endsWith('/bio');
 
   return (
     <>
@@ -71,8 +61,10 @@ function AppLayout() {
 }
 
 function App() {
+  const basename = window.location.pathname.startsWith('/skyphoria') ? '/skyphoria' : '';
+
   return (
-    <Router>
+    <Router basename={basename}>
       <AppLayout />
     </Router>
   );
