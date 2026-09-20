@@ -1,4 +1,5 @@
-import { HashRouter as Router, Routes, Route, Navigate, useLocation } from "react-router-dom";
+import React, { useEffect } from 'react';
+import { HashRouter as Router, Routes, Route, Navigate, useLocation, useNavigate } from "react-router-dom";
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import HomePage from './pages/HomePage';
@@ -17,7 +18,17 @@ import ScrollToTop from './components/ScrollToTop';
 
 function AppLayout() {
   const location = useLocation();
-  const isStandaloneBioPage = location.pathname.includes('/bio');
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    // Automatically synchronize direct path URLs (e.g. /skyphoria/bio or /bio) to HashRouter route
+    const currentPath = window.location.pathname;
+    if (currentPath.includes('/bio') && location.pathname !== '/bio') {
+      navigate('/bio', { replace: true });
+    }
+  }, [location.pathname, navigate]);
+
+  const isStandaloneBioPage = location.pathname.includes('/bio') || window.location.pathname.includes('/bio');
 
   return (
     <>
@@ -49,6 +60,9 @@ function AppLayout() {
           <Route path="/content-creation" element={<Navigate to="/services/content-creation" replace />} />
           <Route path="/performanceMarket" element={<Navigate to="/services/performance-marketing" replace />} />
           <Route path="/prandlink" element={<Navigate to="/services/pr-and-link-building" replace />} />
+
+          {/* Catch-all fallback */}
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </div>
       {!isStandaloneBioPage && <Footer />}
