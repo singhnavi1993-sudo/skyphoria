@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import MarketingSolutions from '../components/MarketingComp/MarketingSolutions';
 import SecondSection from '../components/MarketingComp/SecondSection';
 import AboutStrategySection from '../components/MarketingComp/AboutStrategySection';
-import GetStartedSection from '../components/MarketingComp/GetStartedSection.JSX';
+import GetStartedSection from '../components/MarketingComp/GetStartedSection.jsx';
 
 
 function MarketingSol() {
