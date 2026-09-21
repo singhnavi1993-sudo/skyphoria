@@ -191,12 +191,12 @@ export default function BioPage() {
     };
   }, []);
 
-  // Section 1 Client Slider Settings: Responsive full width slider (4 on laptop, 3 on tablet, 2 on mobile)
+  // Section 1 Client Slider Settings: Exactly 2 cards at a time across all devices
   const clientSliderSettings = {
     dots: false,
     infinite: true,
     speed: 600,
-    slidesToShow: 4,
+    slidesToShow: 2,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3500,
@@ -206,7 +206,7 @@ export default function BioPage() {
     responsive: [
       {
         breakpoint: 1100,
-        settings: { slidesToShow: 3 }
+        settings: { slidesToShow: 2 }
       },
       {
         breakpoint: 768,
@@ -219,12 +219,12 @@ export default function BioPage() {
     ]
   };
 
-  // Section 2 Work Slider Settings: Centered 3/5 circle slider
+  // Section 2 Work Slider Settings: Exactly 3 circles at a time (1 center active + 2 side circles)
   const workSliderSettings = {
     dots: false,
     infinite: true,
     speed: 450,
-    slidesToShow: 5,
+    slidesToShow: 3,
     slidesToScroll: 1,
     centerMode: true,
     centerPadding: '0px',
